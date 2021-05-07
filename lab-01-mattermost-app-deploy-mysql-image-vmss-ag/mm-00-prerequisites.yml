@@ -1,8 +1,6 @@
 - name: Create Application Gateway for Mattermost Application
   hosts: localhost
   connection: local
-  vars_files:
-    - ../vars-myvars.yml
 
   tasks:
 
