@@ -1,10 +1,11 @@
 - name: create rg
   hosts: localhost
   connection: local
+  
   tasks:
-    - name: Creating resource group - "{{ name }}"
+    - name: Creating resource group - "{{ resource_group }}"
       azure_rm_resourcegroup:
-        name: "{{ name }}"
+        name: "{{ resource_group }}"
         location: "{{ location }}"
       register: rg
     - debug:
