@@ -76,4 +76,4 @@
         offer: RHEL
         publisher: RedHat
         sku: '7-LVM'
-        version: 7.6.2018103108
+        version: latest
