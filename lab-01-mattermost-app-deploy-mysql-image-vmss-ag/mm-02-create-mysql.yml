@@ -14,6 +14,7 @@
       admin_username: "{{ mysql_username }}"
       admin_password: "{{ mysql_password }}"
       storage_mb: 51200
+      locateion: eastasia
 
   - name: Create instance of MySQL Database
     azure_rm_mysqldatabase:
