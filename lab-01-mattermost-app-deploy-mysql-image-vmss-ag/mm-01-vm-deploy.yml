@@ -1,8 +1,7 @@
 - name: Deploy Mattermost Infrastructure Virtual Machines
   hosts: localhost
   connection: local
-  vars_files:
-    - ../vars-myvars.yml
+
 
   tasks:
   - name: Create Mattermost VNet
