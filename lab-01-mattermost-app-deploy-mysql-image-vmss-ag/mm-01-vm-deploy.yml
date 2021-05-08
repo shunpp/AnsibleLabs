@@ -1,6 +1,4 @@
 - name: Deploy Mattermost Infrastructure Virtual Machines
-  hosts: localhost
-  connection: local
 
 
   tasks:
