@@ -18,8 +18,6 @@
   hosts: mmostserver
   remote_user: "{{ admin_username }}"
   become: yes  
-  vars_files:
-    - ../vars-myvars.yml
 
   tasks:
     - name: Create Mattermost User
