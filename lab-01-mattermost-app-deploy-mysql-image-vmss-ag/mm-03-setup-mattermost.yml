@@ -15,7 +15,7 @@
 #        groups: mmostserver
  
 - name: Install Mattermost Server
-  hosts: "{{ vm_name }}-mattermost-master"
+  hosts: "{{ vm_name }}-mattermost-nsg"
   remote_user: "{{ admin_username }}"
   become: yes  
 
