@@ -1,22 +1,22 @@
-- name: Determine IP address of Mattermost VM
-  hosts: localhost
-  connection: local
-
-  tasks:
-    - name: Get Mattermost VM IP Address
-      azure_rm_publicipaddress_facts:
-        resource_group: "{{ resource_group }}"
-        name: "{{ vm_name }}-mattermost-master-pip-{{ rnum }}"
-      register: output
-
-    - name: Adding public IP to hosts
-      add_host:
-        hostname: "{{ output.ansible_facts.azure_publicipaddresses[0].properties.ipAddress }}"
-        groups: mmostserver
+# - name: Determine IP address of Mattermost VM
+#  hosts: localhost
+#  connection: local
+#
+#  tasks:
+#    - name: Get Mattermost VM IP Address
+#      azure_rm_publicipaddress_facts:
+#        resource_group: "{{ resource_group }}"
+#        name: "{{ vm_name }}-mattermost-master-pip-{{ rnum }}"
+#      register: output
+#
+#    - name: Adding public IP to hosts
+#      add_host:
+#        hostname: "{{ output.ansible_facts.azure_publicipaddresses[0].properties.ipAddress }}"
+#        groups: mmostserver
  
 - name: Install Mattermost Server
-  hosts: mmostserver
- # remote_user: "{{ admin_username }}"
+  hosts: "{{ vm_name }}-mattermost-master"
+  remote_user: "{{ admin_username }}"
   become: yes  
 
   tasks:
