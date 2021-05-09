@@ -16,7 +16,7 @@
  
 - name: Install Mattermost Server
   hosts: mmostserver
-  remote_user: "{{ admin_username }}"
+ # remote_user: "{{ admin_username }}"
   become: yes  
 
   tasks:
